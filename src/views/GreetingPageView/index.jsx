@@ -3,7 +3,7 @@ import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography"
 import logo from "../../assets/logo.svg"
 
-function HomePageView() {
+function GreetingPageView() {
   return (
     <Box
       margin="6rem 0 0 0"
@@ -16,11 +16,9 @@ function HomePageView() {
         style={{ height: "20vmin", display: "block", margin: "2rem 0 2rem 0" }}
         alt="logo"
       />
-      <Typography variant="h4">
-        Hello Internet Computer + Vite + React + Material UI
-      </Typography>
+      <Typography variant="h4">Greetings from Internet Computer</Typography>
     </Box>
   )
 }
 
-export default HomePageView
+export default GreetingPageView

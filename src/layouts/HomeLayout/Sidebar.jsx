@@ -19,6 +19,11 @@ import ListItemText from "@material-ui/core/ListItemText"
 import InboxIcon from "@material-ui/icons/MoveToInbox"
 import MailIcon from "@material-ui/icons/Mail"
 import HomeRounded from "@material-ui/icons/HomeRounded"
+import LightIcon from "@material-ui/icons/Brightness7Rounded"
+import DarkIcon from "@material-ui/icons/Brightness4Rounded"
+import CounterIcon from "@material-ui/icons/ControlPoint"
+import HelloIcon from "@material-ui/icons/EmojiPeopleRounded"
+import GreetingIcon from "@material-ui/icons/EmojiEmotionsRounded"
 
 const Items = [
   {
@@ -27,14 +32,19 @@ const Items = [
     icon: <HomeRounded />,
   },
   {
-    page: "item-one",
-    title: "Item One",
-    icon: <InboxIcon />,
+    page: "counter",
+    title: "Counter",
+    icon: <CounterIcon />,
   },
   {
-    page: "item-two",
-    title: "Item Two",
-    icon: <MailIcon />,
+    page: "greeting",
+    title: "Greeting",
+    icon: <GreetingIcon />,
+  },
+  {
+    page: "hello-world",
+    title: "Hello",
+    icon: <HelloIcon />,
   },
 ]
 
@@ -46,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    background: "linear-gradient(45deg, #4F46E5 30%, #EC4899 90%)",
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -199,7 +210,7 @@ export default function MiniDrawer() {
         <List>
           <ListItem button onClick={toggleTheme}>
             <ListItemIcon className={classes.iconLeftPad}>
-              <MailIcon />
+              {state.theme === "light" ? <DarkIcon /> : <LightIcon />}
             </ListItemIcon>
             <ListItemText primary={"Theme"} />
           </ListItem>
