@@ -25,7 +25,7 @@ git clone https://github.com/ferMartz/ic-material.git
 With NPM:
 
 ```
-cd ic-playground
+cd ic-material
 npm install
 ```
 
