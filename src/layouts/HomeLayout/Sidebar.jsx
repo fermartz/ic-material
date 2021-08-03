@@ -162,7 +162,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            IC Material UI
+            IC Material
           </Typography>
         </Toolbar>
       </AppBar>
