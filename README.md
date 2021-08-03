@@ -1,6 +1,6 @@
 <img height=320 src="https://github.com/ferMartz/ic-material/blob/main/src/assets/ic-material-shot.png" />
 
-# IC Material UI
+# IC Material
 
 Modern starter and mini playground for the Internet Computer powered by [Create IC APP](https://github.com/MioQuispe/create-ic-app), [ViteJS](https://vitejs.dev/), [ReactJS](https://reactjs.org/), & [Material UI](https://tailwindcss.com/)
 
