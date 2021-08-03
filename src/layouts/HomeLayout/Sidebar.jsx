@@ -30,9 +30,9 @@ const Items = [
     icon: <HomeRounded />,
   },
   {
-    page: "counter",
-    title: "Counter",
-    icon: <CounterIcon />,
+    page: "hello-world",
+    title: "Hello",
+    icon: <HelloIcon />,
   },
   {
     page: "greeting",
@@ -40,9 +40,9 @@ const Items = [
     icon: <GreetingIcon />,
   },
   {
-    page: "hello-world",
-    title: "Hello",
-    icon: <HelloIcon />,
+    page: "counter",
+    title: "Counter",
+    icon: <CounterIcon />,
   },
 ]
 
