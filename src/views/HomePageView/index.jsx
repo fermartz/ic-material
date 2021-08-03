@@ -1,7 +1,6 @@
 import React from "react"
 import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography"
-
 import logo from "../../assets/logo.svg"
 
 function HomePageView() {
@@ -20,7 +19,7 @@ function HomePageView() {
       <Typography variant="h4" gutterBottom>
         Hello Internet Computer + Vite + React + Material UI
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom style={{ margin: "2rem 0" }}>
         Includes dark theme + 3 ICP examples 🚀🚀🚀
       </Typography>
     </Box>

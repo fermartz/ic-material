@@ -16,8 +16,6 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
-import InboxIcon from "@material-ui/icons/MoveToInbox"
-import MailIcon from "@material-ui/icons/Mail"
 import HomeRounded from "@material-ui/icons/HomeRounded"
 import LightIcon from "@material-ui/icons/Brightness7Rounded"
 import DarkIcon from "@material-ui/icons/Brightness4Rounded"
@@ -124,16 +122,16 @@ export default function MiniDrawer() {
   const classes = useStyles()
   const { state, dispatch } = useContext(SiteContext)
   const theme = useTheme()
-  const [open, setOpen] = React.useState(false)
   var localTheme = localStorage.getItem("theme")
 
   const handleDrawerOpen = () => {
-    setOpen(true)
+    dispatch({ type: "TOGGLE_TOOLBAR", payload: true })
   }
 
   const handleDrawerClose = () => {
-    setOpen(false)
+    dispatch({ type: "TOGGLE_TOOLBAR", payload: false })
   }
+
   const toggleTheme = () => {
     console.log("sidebar", localTheme)
     localStorage.setItem("theme", localTheme === "dark" ? "light" : "dark")
@@ -148,7 +146,7 @@ export default function MiniDrawer() {
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
+          [classes.appBarShift]: state.toolbarOpen,
         })}
       >
         <Toolbar>
@@ -158,7 +156,7 @@ export default function MiniDrawer() {
             onClick={handleDrawerOpen}
             edge="start"
             className={clsx(classes.menuButton, {
-              [classes.hide]: open,
+              [classes.hide]: state.toolbarOpen,
             })}
           >
             <MenuIcon />
@@ -171,13 +169,13 @@ export default function MiniDrawer() {
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open,
+          [classes.drawerOpen]: state.toolbarOpen,
+          [classes.drawerClose]: !state.toolbarOpen,
         })}
         classes={{
           paper: clsx({
-            [classes.drawerOpen]: open,
-            [classes.drawerClose]: !open,
+            [classes.drawerOpen]: state.toolbarOpen,
+            [classes.drawerClose]: !state.toolbarOpen,
           }),
         }}
       >

@@ -19,15 +19,6 @@ function App() {
     localStorage.setItem("theme", "light")
   }
 
-  // const [theme, setTheme] = useState(
-  //   localTheme === "light" ? AppTheme.LIGHT : AppTheme.DARK,
-  // )
-
-  // const toggleTheme = () => {
-  //   localStorage.setItem("theme", localTheme === "dark" ? "light" : "dark")
-  //   setTheme(theme === AppTheme.LIGHT ? AppTheme.DARK : AppTheme.LIGHT)
-  // }
-
   const asyncRunner = async () => {
     dispatch({
       type: "UPDATE_THEME",

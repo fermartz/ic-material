@@ -6,10 +6,7 @@ function path(root, sublink) {
 
 const ROOTS = {
   app: "/app",
-}
-
-export const PATH_HOME = {
-  dashboard: ROOTS.app,
+  home: "/",
 }
 
 export const PATH_APP = {

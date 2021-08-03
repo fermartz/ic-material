@@ -1,6 +1,6 @@
-import React, { lazy } from "react";
-import { Redirect } from "react-router-dom";
-import HomeLayout from "../layouts/HomeLayout";
+import React, { lazy } from "react"
+import { Redirect } from "react-router-dom"
+import HomeLayout from "../layouts/HomeLayout"
 
 // ----------------------------------------------------------------------
 
@@ -17,6 +17,6 @@ const HomeRoutes = {
       component: () => <Redirect to="/404" />,
     },
   ],
-};
+}
 
-export default HomeRoutes;
+export default HomeRoutes

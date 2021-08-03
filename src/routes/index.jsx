@@ -1,35 +1,35 @@
-import NProgress from "nprogress";
-import React, { Suspense, Fragment, useEffect, lazy } from "react";
-import { Switch, Route } from "react-router-dom";
-import AppRoutes from "./AppRoutes";
-import HomeRoutes from "./HomeRoutes";
+import NProgress from "nprogress"
+import React, { Suspense, Fragment, useEffect, lazy } from "react"
+import { Switch, Route } from "react-router-dom"
+import AppRoutes from "./AppRoutes"
+import HomeRoutes from "./HomeRoutes"
 
 function RouteProgress(props) {
   NProgress.configure({
     speed: 500,
     showSpinner: false,
-  });
+  })
 
   useEffect(() => {
-    NProgress.done();
+    NProgress.done()
     return () => {
-      NProgress.start();
-    };
-  }, []);
+      NProgress.start()
+    }
+  }, [])
 
-  return <Route {...props} />;
+  return <Route {...props} />
 }
 function LoadingScreen() {
-  return <p>Loading Screen</p>;
+  return <p>Loading Screen</p>
 }
 export function renderRoutes(routes = []) {
   return (
     <Suspense fallback={<LoadingScreen />}>
       <Switch>
         {routes.map((route, i) => {
-          const Component = route.component;
-          const Guard = route.guard || Fragment;
-          const Layout = route.layout || Fragment;
+          const Component = route.component
+          const Guard = route.guard || Fragment
+          const Layout = route.layout || Fragment
 
           return (
             <RouteProgress
@@ -48,11 +48,11 @@ export function renderRoutes(routes = []) {
                 </Guard>
               )}
             />
-          );
+          )
         })}
       </Switch>
     </Suspense>
-  );
+  )
 }
 
 const routes = [
@@ -63,6 +63,6 @@ const routes = [
   },
   AppRoutes,
   HomeRoutes,
-];
+]
 
-export default routes;
+export default routes
