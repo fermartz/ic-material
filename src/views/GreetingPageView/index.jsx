@@ -10,10 +10,12 @@ function GreetingPageView() {
   const [inputStr, SetInputStr] = useState("")
   const [hello, setHello] = useState("")
   const doGreet = useCallback(async () => {
-    setHello("Greeting in progress...")
-    let greeting = await counter.greet(inputStr)
-    console.log(greeting)
-    setHello(greeting)
+    if (inputStr !== "") {
+      setHello("Greeting in progress...")
+      let greeting = await counter.greet(inputStr)
+      console.log(greeting)
+      setHello(greeting)
+    }
   })
   return (
     <Box
