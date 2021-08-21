@@ -4,6 +4,10 @@
       "main": "src/backend/counter/main.mo",
       "type": "motoko"
     },
+    "profile": {
+      "main": "src/backend/profile/main.mo",
+      "type": "motoko"
+    },
     "assets": {
       "dependencies": [
         "counter"
@@ -22,7 +26,7 @@
       "packtool": ""
     }
   },
-  "dfx": "0.7.2",
+  "dfx": "0.8.0",
   "networks": {
     "local": {
       "bind": "127.0.0.1:8000",
